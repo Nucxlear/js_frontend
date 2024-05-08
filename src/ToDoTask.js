@@ -18,7 +18,7 @@ class ToDoTask extends React.Component{
     fetch(`tasks/${this.props.task._id}`, {
       method: 'PATCH',
       body: JSON.stringify({
-        done: !this.props.done
+        done: !this.state.done
       }),
       headers:{
         'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ class ToDoTask extends React.Component{
               <span>{this.props.task.name}</span>
               <span><i>{this.props.task.description}</i> </span>
               <span onClick={this.onStatusClick}> <b>{this.state.done ? 'Done':'Todo'}</b></span>
-              <button onClick={this.onStatusClick}>Delete</button>
+              <button onClick={this.onDeleteClick}>Delete</button>
       </li>
     )
   }
