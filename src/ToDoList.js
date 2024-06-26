@@ -14,7 +14,7 @@ class ToDoList extends React.Component{
           </div>
           <div className="scroll-area-sm">
             <perfect-scrollbar className="ps-show-limits">
-              <div style={{position: "static;"}} className="ps ps--active-y">
+              <div style={{position: "static"}} className="ps ps--active-y">
                 <div className="ps-content">
                   <ul className=" list-group list-group-flush">
                   {
